@@ -23,6 +23,8 @@ Alternatively, you can exclude some groups on the permissions page.
 
 ## Installation
 
+Flarum's **Approval** and **Flags** extensions must be enabled.
+
     composer require clarkwinkelmann/flarum-ext-first-post-approval
 
 ## Support
