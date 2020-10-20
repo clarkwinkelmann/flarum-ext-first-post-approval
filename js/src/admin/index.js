@@ -4,7 +4,7 @@ import PermissionGrid from 'flarum/components/PermissionGrid';
 import SettingsModal from './components/SettingsModal';
 
 app.initializers.add('clarkwinkelmann-first-post-approval', () => {
-    app.extensionSettings['clarkwinkelmann-first-post-approval'] = () => app.modal.show(new SettingsModal());
+    app.extensionSettings['clarkwinkelmann-first-post-approval'] = () => app.modal.show(SettingsModal);
 
     extend(PermissionGrid.prototype, 'startItems', items => {
         items.add('clarkwinkelmann-group-invitation-use', {
