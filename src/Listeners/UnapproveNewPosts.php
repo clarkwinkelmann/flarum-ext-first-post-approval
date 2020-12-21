@@ -1,23 +1,15 @@
 <?php
 
-namespace ClarkWinkelmann\FirstPostApproval\Extenders;
+namespace ClarkWinkelmann\FirstPostApproval\Listeners;
 
-use Flarum\Extend\ExtenderInterface;
-use Flarum\Extension\Extension;
 use Flarum\Flags\Flag;
 use Flarum\Post\Event\Saving;
 use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Illuminate\Contracts\Container\Container;
 
-class UnapproveNewPosts implements ExtenderInterface
+class UnapproveNewPosts
 {
-    public function extend(Container $container, Extension $extension = null)
-    {
-        $container['events']->listen(Saving::class, [$this, 'saving']);
-    }
-
-    public function saving(Saving $event)
+    public function handle(Saving $event)
     {
         $post = $event->post;
 

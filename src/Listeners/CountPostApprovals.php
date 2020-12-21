@@ -1,21 +1,12 @@
 <?php
 
-
-namespace ClarkWinkelmann\FirstPostApproval\Extenders;
+namespace ClarkWinkelmann\FirstPostApproval\Listeners;
 
 use Flarum\Approval\Event\PostWasApproved;
-use Flarum\Extend\ExtenderInterface;
-use Flarum\Extension\Extension;
-use Illuminate\Contracts\Container\Container;
 
-class CountPostApprovals implements ExtenderInterface
+class CountPostApprovals
 {
-    public function extend(Container $container, Extension $extension = null)
-    {
-        $container['events']->listen(PostWasApproved::class, [$this, 'approved']);
-    }
-
-    public function approved(PostWasApproved $event)
+    public function handle(PostWasApproved $event)
     {
         $user = $event->post->user;
 
