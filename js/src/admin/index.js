@@ -37,7 +37,7 @@ app.initializers.add('clarkwinkelmann-first-post-approval', () => {
             ]);
         })
         .registerPermission({
-            icon: 'fas fa-check', // Font-Awesome Icon
+            icon: 'fas fa-check',
             label: app.translator.trans('clarkwinkelmann-first-post-approval.admin.permissions.bypass'),
             permission: 'discussion.firstPostWithoutApproval',
         }, 'start');
