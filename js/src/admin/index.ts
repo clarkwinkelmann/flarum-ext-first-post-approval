@@ -1,6 +1,5 @@
 import app from 'flarum/admin/app';
-
-/* global m */
+import AdminPage from 'flarum/admin/components/AdminPage';
 
 const settingsPrefix = 'clarkwinkelmann-first-post-approval.';
 const translationPrefix = 'clarkwinkelmann-first-post-approval.admin.settings.';
@@ -8,7 +7,7 @@ const translationPrefix = 'clarkwinkelmann-first-post-approval.admin.settings.';
 app.initializers.add('clarkwinkelmann-first-post-approval', () => {
     app.extensionData
         .for('clarkwinkelmann-first-post-approval')
-        .registerSetting(function () {
+        .registerSetting(function (this: AdminPage) {
             return m('.Form-group', [
                 m('label', {
                     for: 'clarkwinkelmann-first-post-approval-postCount',
@@ -18,11 +17,11 @@ app.initializers.add('clarkwinkelmann-first-post-approval', () => {
                     type: 'number',
                     min: 0,
                     step: 1,
-                    bidi: this.setting(settingsPrefix + 'postCount', 0),
+                    bidi: this.setting(settingsPrefix + 'postCount', '0'),
                 }),
             ]);
         })
-        .registerSetting(function () {
+        .registerSetting(function (this: AdminPage) {
             return m('.Form-group', [
                 m('label', {
                     for: 'clarkwinkelmann-first-post-approval-discussionCount',
@@ -32,7 +31,7 @@ app.initializers.add('clarkwinkelmann-first-post-approval', () => {
                     type: 'number',
                     min: 0,
                     step: 1,
-                    bidi: this.setting(settingsPrefix + 'discussionCount', 0),
+                    bidi: this.setting(settingsPrefix + 'discussionCount', '0'),
                 }),
             ]);
         })
