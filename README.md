@@ -1,6 +1,6 @@
 # First Post Approval
 
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/clarkwinkelmann/flarum-ext-first-post-approval/blob/master/LICENSE.md) [![Latest Stable Version](https://img.shields.io/packagist/v/clarkwinkelmann/flarum-ext-first-post-approval.svg)](https://packagist.org/packages/clarkwinkelmann/flarum-ext-first-post-approval) [![Total Downloads](https://img.shields.io/packagist/dt/clarkwinkelmann/flarum-ext-first-post-approval.svg)](https://packagist.org/packages/clarkwinkelmann/flarum-ext-first-post-approval) [![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/clarkwinkelmann)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/clarkwinkelmann/flarum-ext-first-post-approval/blob/master/LICENSE.txt) [![Latest Stable Version](https://img.shields.io/packagist/v/clarkwinkelmann/flarum-ext-first-post-approval.svg)](https://packagist.org/packages/clarkwinkelmann/flarum-ext-first-post-approval) [![Total Downloads](https://img.shields.io/packagist/dt/clarkwinkelmann/flarum-ext-first-post-approval.svg)](https://packagist.org/packages/clarkwinkelmann/flarum-ext-first-post-approval) [![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/clarkwinkelmann)
 
 This extension holds the first n posts and/or discussions from users for approval.
 
