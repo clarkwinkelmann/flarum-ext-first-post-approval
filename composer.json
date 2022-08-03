@@ -8,8 +8,8 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/approval": "^1.0",
-        "flarum/core": "^1.0"
+        "flarum/approval": "*",
+        "flarum/core": "^1.3"
     },
     "authors": [
         {

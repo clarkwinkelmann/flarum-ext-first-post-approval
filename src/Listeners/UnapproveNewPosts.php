@@ -26,7 +26,7 @@ class UnapproveNewPosts
 
         $discussionCount = $this->settings->get('clarkwinkelmann-first-post-approval.discussionCount');
 
-        if ($post->discussion->post_number_index == 0 && $discussionCount) {
+        if ($post->discussion->first_post_id === null && $discussionCount) {
             // If this is a new discussion and if a rule has been defined for new discussions
             if ($event->actor->first_discussion_approval_count >= $discussionCount) {
                 return;
